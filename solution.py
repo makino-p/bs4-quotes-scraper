@@ -99,8 +99,9 @@ def print_summary(quotes: list[dict], authors: list[dict]) -> None:
         # Count tags
         tag_counts = {}
         for quote in quotes:
-            for tag in quote['tags'].split(','):
-                if tag:  # avoid empty strings if any
+            tags = quote['tags'] if isinstance(quote['tags'], list) else quote['tags'].split(',')
+            for tag in tags:
+                if tag:
                     tag_counts[tag] = tag_counts.get(tag, 0) + 1
         # Sort tags by count descending
         sorted_tags = sorted(tag_counts.items(), key=lambda x: x[1], reverse=True)
