@@ -75,6 +75,7 @@ pip install bs4 pandas requests
 
 | File | Description |
 |---|---|
+| `.git` | Generated output |
 | `authors.csv` | Generated output |
 | `quotes_full.csv` | Generated output |
 
@@ -84,7 +85,7 @@ pip install bs4 pandas requests
 
 - **Lines of code**: 167
 - **Functions**: 5
-- **Output files**: 2
+- **Output files**: 3
 
 ---
 
